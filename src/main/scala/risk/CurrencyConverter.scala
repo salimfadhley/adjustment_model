@@ -5,6 +5,8 @@ package risk
   */
 trait CurrencyConverter {
 
+  def convert(row: PlexRow, toCCY: Currency = "USD")
+
 
 
 }

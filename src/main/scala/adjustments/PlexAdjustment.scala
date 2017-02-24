@@ -1,11 +1,16 @@
 package adjustments
 
+import risk.PlexRow
+
 /**
   * Created by salim on 2/23/2017.
   */
 
-class PlexAdjustment(id:Long, trade:Option[String], instrument:Option[String]) extends Adjustment {
+class PlexAdjustment(adjustment: AdjustmentContent) extends Adjustment {
 
-  override def getAdjustmentImpacts: List[AdjustmentImpacts] = ???
+  override def getAdjustmentImpacts: List[PlexRow] = {
+
+
+  }
 
 }
