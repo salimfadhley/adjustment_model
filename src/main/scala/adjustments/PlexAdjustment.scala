@@ -10,6 +10,12 @@ class PlexAdjustment(adjustment: AdjustmentContent) extends Adjustment {
 
   override def getAdjustmentImpacts: List[PlexRow] = {
 
+    adjustment.measures.map {
+      (component: PlexAdjustmentComponent) => {
+        PlexRow(id =)
+
+      }
+    }
 
   }
 

@@ -15,7 +15,9 @@ case class PlexRow(
                     measureValue: Double,
                     ccy: Currency,
                     qualifier: Currency,
-                    comment: Option[String]
+                    comment: Option[String],
+                    data_source: Option[DataSource.type] // "PlexAdjusek
+                    // "
                   ) {
 
 }
