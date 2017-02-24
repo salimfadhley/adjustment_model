@@ -7,5 +7,5 @@ object BalanceSheetImpact extends Enumeration {
   // Represents the different types of balance sheets
   // to which an adjustment may accrue.
   type BalanceSheetImpact = Value
-  val CashToday, Reserves, PV = Value
+  val CashToday, Reserves, PV, Bonds = Value
 }

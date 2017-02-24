@@ -20,6 +20,7 @@ class PlexAdjustment(adjustment: AdjustmentContent) extends Adjustment {
         adminId = adjustment.adminId,
         instrumentType = adjustment.instrumentType,
         measure = component.measureName,
+        balanceSheetMeasure = component.balanceSheetImpact,
         ccy = component.ccy,
         measureValue = component.adjustmentValue,
         qualifier = component.ccy,
