@@ -20,6 +20,6 @@ case class PlexRow(
                     data_source: PlexDataSource.Value
                   ) {
 
-  import adjustments.BalanceSheetImpact.BalanceSheetImpact
+  import adjustments.BalanceSheets.BalanceSheets
 
 }

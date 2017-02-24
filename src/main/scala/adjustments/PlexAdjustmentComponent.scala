@@ -8,7 +8,7 @@ import plex.Currency
 case class PlexAdjustmentComponent(
                                     measureName: String,
                                     adjustmentValue: Double,
-                                    balanceSheetImpact: Option[BalanceSheetImpact.BalanceSheetImpact],
+                                    balanceSheetImpact: Option[BalanceSheets.BalanceSheets],
                                     ccy: Currency,
                                     comment: Option[String]
                                   ) {

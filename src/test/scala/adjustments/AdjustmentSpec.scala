@@ -13,7 +13,7 @@ class AdjustmentSpec extends FlatSpec with Matchers {
   "Adjustments" should "be creatable as objects" in {
 
 
-    val components: List[PlexAdjustmentComponent] = PlexAdjustmentComponent("foo", 2.3, Some(BalanceSheetImpact.PV), "USD", Some("Hello World")) :: Nil
+    val components: List[PlexAdjustmentComponent] = PlexAdjustmentComponent("foo", 2.3, Some(BalanceSheets.PV), "USD", Some("Hello World")) :: Nil
 
     val adjustment = new PlexAdjustment(
       AdjustmentContent(
