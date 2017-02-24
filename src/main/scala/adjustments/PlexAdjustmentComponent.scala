@@ -1,6 +1,6 @@
 package adjustments
 
-import risk.Currency
+import plex.Currency
 
 /**
   * Created by salim on 2/24/2017.
@@ -8,7 +8,7 @@ import risk.Currency
 case class PlexAdjustmentComponent(
                                     measureName: String,
                                     adjustmentValue: Double,
-                                    balanceSheetImpact: Option[String],
+                                    balanceSheetImpact: Option[BalanceSheetImpact.BalanceSheetImpact],
                                     ccy: Currency,
                                     comment: Option[String]
                                   ) {

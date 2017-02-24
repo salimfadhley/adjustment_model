@@ -1,4 +1,4 @@
-package risk
+package plex
 
 /**
   * Created by salim on 2/24/2017.
@@ -16,8 +16,7 @@ case class PlexRow(
                     ccy: Currency,
                     qualifier: Currency,
                     comment: Option[String],
-                    data_source: Option[DataSource.type] // "PlexAdjusek
-                    // "
+                    data_source: PlexDataSource.Value
                   ) {
 
 }

@@ -3,7 +3,7 @@ package adjustments
 import java.time.LocalDate
 
 import org.scalatest.{FlatSpec, Matchers}
-import risk.PlexRow
+import plex.PlexRow
 
 /**
   * Created by salim on 2/23/2017.
@@ -13,7 +13,7 @@ class AdjustmentSpec extends FlatSpec with Matchers {
   "Adjustments" should "be creatable as objects" in {
 
 
-    val components: List[PlexAdjustmentComponent] = PlexAdjustmentComponent("foo", 2.3, Some("bar"), "USD", Some("Hello World")) :: Nil
+    val components: List[PlexAdjustmentComponent] = PlexAdjustmentComponent("foo", 2.3, Some(BalanceSheetImpact.PV), "USD", Some("Hello World")) :: Nil
 
     val adjustment = new PlexAdjustment(
       AdjustmentContent(
@@ -26,7 +26,7 @@ class AdjustmentSpec extends FlatSpec with Matchers {
         instrumentType = Some("Swap"),
         effective_date = LocalDate.of(2017, 2, 27),
         reversal_date = Some(LocalDate.of(2017, 3, 1)),
-        measures = components,
+        components = components,
         cancelled = false
       ))
 

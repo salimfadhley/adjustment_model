@@ -15,7 +15,7 @@ case class AdjustmentContent(
                               instrumentType: Option[String],
                               effective_date: LocalDate,
                               reversal_date: Option[LocalDate],
-                              measures: List[PlexAdjustmentComponent],
+                              components: List[PlexAdjustmentComponent],
                               cancelled: Boolean
                             ) {
 
