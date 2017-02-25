@@ -3,7 +3,8 @@ package adjustments
 import java.time.LocalDate
 
 import org.scalatest.{FlatSpec, Matchers}
-import plex.PlexRow
+import plex.PlexDataSource._
+import plex.{PlexDataSource, PlexRow}
 
 /**
   * Created by salim on 2/23/2017.
@@ -20,7 +21,7 @@ class AdjustmentSpec extends FlatSpec with Matchers {
         id = 0L,
         tradeId = Some("123"),
         bookId = Some("YMaster.ABCD"),
-        groupId = Some("xxx_yyy"),
+        groupId = Some("group1"),
         instrumentId = Some("Foo123"),
         adminId = Some("1234A"),
         instrumentType = Some("Swap"),
@@ -32,6 +33,25 @@ class AdjustmentSpec extends FlatSpec with Matchers {
 
     val impacts: List[PlexRow] = adjustment.getAdjustmentImpacts
 
+    val expected: List[PlexRow] = List(
+      PlexRow(
+        id=0L,
+        tradeId = Some("123"),
+        bookId = Some("YMaster.ABCD"),
+        groupId = Some("group1"),
+        instrumentId = Some("Foo123"),
+        adminId = Some("1234A"),
+        instrumentType = Some("Swap"),
+        measure = "foo",
+        balanceSheetMeasure = Some(BalanceSheets.PV),
+        measureValue = 2.3,
+        ccy="USD",
+        qualifier="USD",
+        comment=Some("Hello World"),
+        data_source = PlexAdjustment
+    ))
+
+    assert(impacts == expected)
 
   }
 }
