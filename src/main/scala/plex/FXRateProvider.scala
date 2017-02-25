@@ -7,6 +7,6 @@ import java.time.LocalDate
   */
 trait FXRateProvider {
 
-  def getSpotRate(date: LocalDate, fromCcy: Currency, toCcy: Currency = "USD"): FxRate
+  def getSpotRateForBookGroup(bookGroup:String, date: LocalDate, fromCcy: Currency, toCcy: Currency = "USD"): FxRate
 
 }

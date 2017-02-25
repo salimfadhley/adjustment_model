@@ -21,8 +21,4 @@ case class PlexRow(
                     qualifier: Currency,
                     comment: Option[String],
                     data_source: PlexDataSource.Value
-                  ) {
-
-  import adjustments.BalanceSheets.BalanceSheets
-
-}
+                  )
