@@ -1,6 +1,6 @@
 package plex
 
-import adjustments.BalanceSheets
+import adjustments.{AdjustmentImpact, BalanceSheets}
 import org.scalatest.{FlatSpec, Matchers}
 import plex.PlexDataSource.PlexAdjustment
 
@@ -11,7 +11,7 @@ class TotalCalculatorSpec extends FlatSpec with Matchers {
 
   "TotalCalulator" should "expand balance sheet measures to total sheets" in {
 
-    val pr0 = PlexRow(
+    val pr0 = AdjustmentImpact(
       id=0L,
       tradeId = Some("123"),
       bookId = Some("YMaster.ABCD"),

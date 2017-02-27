@@ -27,5 +27,10 @@ class MeasureAccrualsSpec extends FlatSpec with Matchers {
     assert(accruals == Nil)
   }
 
+  it should "know Balance Sheet measures do not generate additional totals" in {
+    val accruals = MeasureAccruals.calculateAccruals("xxx", MeasureType.BalanceSheet, None)
+    assert(accruals == Nil)
+  }
+
 
 }

@@ -1,12 +1,11 @@
-package plex
+package adjustments
 
-import adjustments.BalanceSheets
-import adjustments.BalanceSheets.BalanceSheets
+import plex.{Currency, PlexDataSource}
 
 /**
   * Created by salim on 2/24/2017.
   */
-case class PlexRow(
+case class AdjustmentImpact(
                     id: Long,
                     tradeId: Option[String],
                     bookId: Option[String],

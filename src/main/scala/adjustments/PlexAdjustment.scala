@@ -1,6 +1,6 @@
 package adjustments
 
-import plex.{PlexDataSource, PlexRow}
+import plex.PlexDataSource
 
 /**
   * Created by salim on 2/23/2017.
@@ -8,10 +8,9 @@ import plex.{PlexDataSource, PlexRow}
 
 class PlexAdjustment(adjustment: AdjustmentContent) extends Adjustment {
 
-  override def getAdjustmentImpacts: List[PlexRow] = {
-
+  override def getAdjustmentImpacts: List[AdjustmentImpact] = {
     adjustment.components.map {
-      (component: PlexAdjustmentComponent) => PlexRow(
+      (component: PlexAdjustmentComponent) => AdjustmentImpact(
         id = adjustment.id,
         tradeId = adjustment.tradeId,
         bookId = adjustment.bookId,
@@ -31,4 +30,9 @@ class PlexAdjustment(adjustment: AdjustmentContent) extends Adjustment {
 
   }
 
+  override def getNormalizedAdjustmentImpacts: List[NormalizedAdjustmentImpact] = {
+
+
+
+  }
 }
