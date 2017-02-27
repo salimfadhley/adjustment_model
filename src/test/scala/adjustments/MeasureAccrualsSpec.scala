@@ -1,5 +1,5 @@
-package plex
-import adjustments.BalanceSheets
+package adjustments
+
 import org.scalatest.{FlatSpec, Matchers}
 
 /**

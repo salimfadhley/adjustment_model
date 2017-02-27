@@ -4,7 +4,6 @@ import java.time.LocalDate
 
 import org.scalatest.{FlatSpec, Matchers}
 import plex.PlexDataSource._
-import plex.{MeasureType, PlexDataSource}
 
 /**
   * Created by salim on 2/23/2017.
@@ -70,7 +69,7 @@ class AdjustmentSpec extends FlatSpec with Matchers {
         cancelled = false
       ))
 
-    val impacts: List[AdjustmentImpact] = adjustment.getNormalizedAdjustmentImpacts
+    val impacts: List[NormalizedAdjustmentImpact] = adjustment.getNormalizedAdjustmentImpacts
 
     val expected: List[NormalizedAdjustmentImpact] = List(
       NormalizedAdjustmentImpact(
@@ -103,6 +102,54 @@ class AdjustmentSpec extends FlatSpec with Matchers {
         ccy="USD",
         qualifier="USD",
         comment=Some("Hello World"),
+        data_source = PlexAdjustment
+      ),
+      NormalizedAdjustmentImpact(
+        id = 0L,
+        tradeId = Some("123"),
+        bookId = Some("YMaster.ABCD"),
+        groupId = Some("group1"),
+        instrumentId = Some("Foo123"),
+        adminId = Some("1234A"),
+        instrumentType = Some("Swap"),
+        measure = "TotalPnL",
+        measureType = MeasureType.Calculated,
+        measureValue = 2.3,
+        ccy = "USD",
+        qualifier = "USD",
+        comment = Some("Hello World"),
+        data_source = PlexAdjustment
+      ),
+      NormalizedAdjustmentImpact(
+        id = 0L,
+        tradeId = Some("123"),
+        bookId = Some("YMaster.ABCD"),
+        groupId = Some("group1"),
+        instrumentId = Some("Foo123"),
+        adminId = Some("1234A"),
+        instrumentType = Some("Swap"),
+        measure = "TotalPnLExcludingBrokerage",
+        measureType = MeasureType.Calculated,
+        measureValue = 2.3,
+        ccy = "USD",
+        qualifier = "USD",
+        comment = Some("Hello World"),
+        data_source = PlexAdjustment
+      ),
+      NormalizedAdjustmentImpact(
+        id = 0L,
+        tradeId = Some("123"),
+        bookId = Some("YMaster.ABCD"),
+        groupId = Some("group1"),
+        instrumentId = Some("Foo123"),
+        adminId = Some("1234A"),
+        instrumentType = Some("Swap"),
+        measure = "FinancePnL",
+        measureType = MeasureType.Calculated,
+        measureValue = 2.3,
+        ccy = "USD",
+        qualifier = "USD",
+        comment = Some("Hello World"),
         data_source = PlexAdjustment
       )
 

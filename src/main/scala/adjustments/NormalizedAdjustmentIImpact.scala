@@ -1,6 +1,6 @@
 package adjustments
 
-import plex.MeasureType.MeasureType
+import adjustments.MeasureType.MeasureType
 import plex.{Currency, PlexDataSource}
 
 /**

@@ -1,6 +1,5 @@
-package plex
+package adjustments
 
-import adjustments.{AdjustmentImpact, BalanceSheets}
 import org.scalatest.{FlatSpec, Matchers}
 import plex.PlexDataSource.PlexAdjustment
 
@@ -28,7 +27,7 @@ class TotalCalculatorSpec extends FlatSpec with Matchers {
       data_source = PlexAdjustment
     )
 
-    val expended = TotalCalculator.calculateTotals(pr0)
+    //    val expended = TotalCalculator.calculateTotals(pr0)
 
 
 

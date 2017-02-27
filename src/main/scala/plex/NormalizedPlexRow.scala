@@ -1,7 +1,6 @@
 package plex
 
-import adjustments.BalanceSheets
-import MeasureType.MeasureType
+import adjustments.MeasureType.MeasureType
 
 /**
   * Created by salim on 2/25/2017.
