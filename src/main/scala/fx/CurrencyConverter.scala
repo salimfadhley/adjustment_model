@@ -1,4 +1,4 @@
-package plex
+package fx
 
 import adjustments.AdjustmentImpact
 

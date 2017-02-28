@@ -1,4 +1,4 @@
-package plex
+package adjustments
 
 /**
   * Created by salim on 2/24/2017.
@@ -10,4 +10,3 @@ object PlexDataSource extends Enumeration {
   val RemoteRisk, PlexAdjustment = Value
 
 }
-

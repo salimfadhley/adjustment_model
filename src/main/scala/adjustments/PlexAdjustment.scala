@@ -1,7 +1,7 @@
 package adjustments
 
 import adjustments.MeasureType.MeasureType
-import plex.PlexDataSource
+import PlexDataSource
 
 /**
   * Created by salim on 2/23/2017.

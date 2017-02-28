@@ -3,7 +3,7 @@ import java.time.LocalDate
 import javax.activation.DataSource
 
 import org.scalatest.{FlatSpec, Matchers}
-import plex.PlexDataSource
+import PlexDataSource
 
 /**
   * Created by salim on 2/23/2017.
@@ -119,7 +119,6 @@ class AdjustmentSpec extends FlatSpec with Matchers {
 
     assert(impacts.map(_.measure)==expected.map(_.measure))
     assert(impacts.map(_.measureType)==expected.map(_.measureType))
-
     assert(impacts.toSet == expected.toSet)
   }
 

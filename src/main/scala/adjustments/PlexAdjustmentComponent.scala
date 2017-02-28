@@ -1,6 +1,6 @@
 package adjustments
 
-import plex.Currency
+import fx.Currency
 
 /**
   * Created by salim on 2/24/2017.
