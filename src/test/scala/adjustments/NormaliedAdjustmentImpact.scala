@@ -43,11 +43,11 @@ class NormaliedAdjustmentImpact extends FlatSpec with Matchers {
       data_source = PlexDataSource.PlexAdjustment
     )
 
-    val result = original.convertCCY("USD")
-
-    withClue("Currency conversion has failed"){
-      assert(result==expected)
-    }
+    //    val result = original.convertCCY("USD")
+    //
+    //    withClue("Currency conversion has failed"){
+    //      assert(result==expected)
+    //    }
 
 
   }

@@ -1,13 +1,21 @@
 package adjustments
 
 import adjustments.MeasureType.MeasureType
-import PlexDataSource
 
 /**
   * Created by salim on 2/23/2017.
   */
 
 class PlexAdjustment(adjustment: AdjustmentContent) extends Adjustment {
+
+  override def getNormalizedAdjustmentImpacts: List[NormalizedAdjustmentImpact] = {
+    adjustment.components.flatMap {
+      case c => MeasureAccruals.calculateAccruals(c.measureName, c.balanceSheetImpact).map(
+        (a: (MeasureType, String)) => {
+          pa(c, a._1, a._2)
+        })
+    }
+  }
 
   def pa(c:PlexAdjustmentComponent, measureType: MeasureType, measureName:String): NormalizedAdjustmentImpact = {
     NormalizedAdjustmentImpact(
@@ -26,13 +34,5 @@ class PlexAdjustment(adjustment: AdjustmentContent) extends Adjustment {
       comment = c.comment,
       data_source = PlexDataSource.PlexAdjustment
     )
-  }
-
-  override def getNormalizedAdjustmentImpacts: List[NormalizedAdjustmentImpact] = {
-    adjustment.components.flatMap{
-      case c => MeasureAccruals.calculateAccruals(c.measureName, c.balanceSheetImpact).map((a: (MeasureType, String)) =>{
-          pa(c, a._1, a._2)
-        })
-    }
   }
 }

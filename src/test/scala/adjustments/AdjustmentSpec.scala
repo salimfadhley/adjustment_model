@@ -1,9 +1,7 @@
 package adjustments
 import java.time.LocalDate
-import javax.activation.DataSource
 
 import org.scalatest.{FlatSpec, Matchers}
-import PlexDataSource
 
 /**
   * Created by salim on 2/23/2017.
